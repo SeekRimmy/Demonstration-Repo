@@ -1,0 +1,255 @@
+h1 { 
+    text-align: center;
+    color: RED;
+    text-shadow: 4px 4px 5px rgb(82, 2, 2);
+}
+
+.title {
+    color: rgb(32, 87, 48);
+}
+
+#italic {
+    color: orange;
+}
+/* nav bar on all other pages */
+nav{
+    background-color: green;
+    text-align: center;
+
+}
+/* This is the nav bar on Contact2 */
+.nav-wrapper {
+    background-color: bisque;
+}
+
+a{
+    text-decoration-line: none;
+} 
+
+/* getting rid of the dots from ul lists */
+nav ul {
+    list-style: none;
+}
+
+ /* this is the navigation bar */
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+    /*This is the border around the "what are divs*/
+.container{
+    border: 5px solid grey; 
+    margin: 50px 5px;
+    padding: 30px 0px 10px 5px;
+}
+/* this is for the boxes on home page inside the flexbox / animations */
+.box{
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 10px;
+}
+/* This is where we started to learn animations */
+@keyframes fadeMe {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#box1{
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+0%{transform: rotate(90deg);}
+50%{transform: rotate(180deg);}
+100%{transform: rotate(360deg);}
+
+}
+#box2{
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: 4s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%; 
+    background-image: radial-gradient(circle,purple,orange,yellow,pink,purple);
+}
+
+@keyframes getBigger {
+    0%{transform: scale(1);}
+    50%{transform: scale(2);}
+    100%{transform: scale(.5);}
+
+}
+ #box3{
+    animation-name: getBigger;
+    animation-duration: 6s;
+    animation-iteration-count: 8s;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    background: orange;
+ }
+
+ @keyframes changeColors {
+    0%{background-color:grey}
+    25%{background-color:rgb(24, 16, 113)}
+    50%{background-color:rgb(206, 14, 14)}
+    75%{background-color:rgb(12, 148, 16)}
+    100%{background-color:rgb(61, 60, 7)}
+ }
+
+ #box4 {
+    animation: changeColors 7s infinite; 
+ }
+
+ @keyframes moveBox{
+    0%{left: 0px; top:0px}
+    25%{left: 100px; top:0px}
+    50%{left: 100px; top:200px}
+    75%{left: 0px; top:200px}
+    100%{left: 0px; top:0px}
+ }
+
+ #box5 {
+    position: relative;
+    background: yellow;
+    animation: moveBox 5s 3s;
+ }
+
+ #box6{
+    top: 10px;
+    left: 20px;
+    position: relative;
+ }
+
+ /*html {
+    background-image: radial-gradient(red, orange, yellow, green, blue, purple);
+ } */
+
+
+    /*THis is how to make a picture round - the percent will change the amount*/
+.circle-img {
+    border-radius: 10%;
+}
+
+/* this is where we added the shadows to the at pictures on home page */
+img {
+    box-shadow: 4px 4px 4px 8px rgba(215, 215, 220, 0.196);
+}
+/* This is our flexbox on the home page */
+.flex {
+    margin: 30px;
+    border: 3px solid black;
+    display: Flex;
+    /* flex wrap: wrap;  is what allows the contents to wrap to next line
+    when the window get smaller or shown on smaller screens*/
+   flex-wrap: wrap;
+   justify-content: center;
+    padding: 100px;
+}
+/* This is the flexbox for the Contact2 page to wrap all the content into one box for css */
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+    
+.row {
+    margin: 30px;
+}
+
+.input-field {
+    margin: 20px;
+}
+
+
+/* One way to style this - writing each out individually */
+/*form-input {
+    display: block;
+    margin: 30px
+}
+
+form textarea {
+    display: block;
+    margin: 30px;
+}
+
+form button {
+    display: block;
+    margin: 30px
+} */
+
+/* short cut way to make form pretty*/
+
+form input, textarea, button {
+    display: block;
+    margin: 30px;
+}
+/* This is learning about grid */
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: white;
+    color: #444;
+  }
+
+  .Box {
+    background-color: white;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+  }
+
+  .a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+  }
+  .b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+  }
+  .c {
+    grid-column: col 1 / span 5;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgb(30, 30, 65), rgb(81, 25, 25), rgb(79, 68, 68));
+  }
+
+  .d {
+    grid-column: col 1 / span  3 ;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+  }
+
+  .e {
+    grid-column: col 3/ span  3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(orange,yellow,pink,purple);
+  }
